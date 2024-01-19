@@ -1,29 +1,46 @@
 .start-panel {
-
+    display: grid;
+    grid-template-columns: minmax(50px, 1fr) minmax(170px, 4fr) 15fr ;
 }
 .start-panel__icons {
-
+    display: grid;
+    grid-template-rows: 1fr 5fr repeat(4, 1fr);
+    align-items: end;
 }
 .start-panel__grid {
-
+    display: grid;
+    grid-auto-rows: minmax(50px, 200px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        'office other'
+        'web other';
 }
 .apps--office {
+    display: grid;
+    grid-area: office;
 
 }
 .apps--web {
-
+    display: grid;
+    grid-area: web;
 }
 .apps--other {
-
+    display: grid;
+    grid-area: other;
 }
 .apps__grid {
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(auto, 50px);
 }
 .app--g2x2 {
-
+    grid-column: span 2;
+    grid-row: span 2;
+    gap: 0.5;
 }
 .app--g2x1 {
-
+    grid-column: 1;
+    grid-row: span 2;
 }
 .app--g1x2 {
 
